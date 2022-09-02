@@ -36,6 +36,14 @@ export default class OrderItem {
   }
 
   get price(): number {
+    return this._price;// * this._quantity;
+  }
+
+  get subTotalPrice(): number {
     return this._price * this._quantity;
   }
+
+  totalPrice(): number {
+    return this._price * this._quantity;
+  }  
 }
